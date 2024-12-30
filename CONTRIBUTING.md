@@ -5,7 +5,7 @@ Primeiramente, obrigado por considerar contribuir para o Aviator Game! É graça
 ## 📝 Processo de Contribuição
 
 1. Faça um fork do projeto
-2. Clone o seu fork: `git clone https://github.com/seu-usuario/aviator-clone.git`
+2. Clone o seu fork: `git clone https://github.com/delfimcelestino/aviator-clone.git`
 3. Crie uma branch para sua feature: `git checkout -b feature/nome-da-feature`
 4. Faça commit das suas alterações:
    ```bash
