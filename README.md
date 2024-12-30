@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛩️ Aviator Game
 
-## Getting Started
+Um jogo de apostas multiplayer em tempo real inspirado no popular jogo Aviator. Desenvolvido com Next.js 14, TypeScript, e Tailwind CSS.
 
-First, run the development server:
+## ✨ Características
+
+- 🎮 Gameplay em tempo real com animações suaves
+- 👥 Sistema de apostas múltiplas
+- 📊 Estatísticas ao vivo
+- 🎯 Apostas simuladas com dados realistas
+- 💫 Interface moderna com efeitos visuais
+- ⏱️ Sistema de contagem regressiva
+- 🌓 Design dark mode com glassmorphism
+
+## 🚀 Tecnologias
+
+- [Next.js 14](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Faker.js](https://fakerjs.dev/)
+- [Lucide Icons](https://lucide.dev/)
+- [Shadcn/ui](https://ui.shadcn.com/)
+
+## 🛠️ Instalação
 
 ```bash
+# Clone o repositório
+git clone https://github.com/delfimcelestino/aviator-clone.git
+
+# Entre no diretório
+cd aviator-clone
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎮 Como Jogar
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Escolha o valor da sua aposta
+2. Aguarde a contagem regressiva
+3. Observe o avião decolar e o multiplicador aumentar
+4. Colete seus ganhos antes que o avião voe para longe!
 
-## Learn More
+## 🤝 Contribuindo
 
-To learn more about Next.js, take a look at the following resources:
+Contribuições são sempre bem-vindas! Por favor, leia o [CONTRIBUTING.md](CONTRIBUTING.md) primeiro.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👨‍💻 Autor
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Delfim Celestino](https://github.com/delfimcelestino) - Desenvolvimento e Design
 
-## Deploy on Vercel
+## 📝 Licença
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.

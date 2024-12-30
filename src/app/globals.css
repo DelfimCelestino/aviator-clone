@@ -2,20 +2,132 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Animações do avião */
+.plane-animation {
+  --multiplier: 1;
+  --crash-point: 1;
+  position: absolute;
+  left: 0;
+  bottom: 20%;
+  animation: fly 1s infinite ease-in-out;
+  transform: translate(
+    min(calc(var(--multiplier) * 100px), 600px),
+    max(calc(var(--multiplier) * -50px), -300px)
+  );
+  filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.5));
+  transition: all 200ms linear;
+}
+
+.plane-crash {
+  animation: takeoff 1s forwards cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fly {
+  0%,
+  100% {
+    transform: translate(
+      min(calc(var(--multiplier) * 100px), 600px),
+      max(calc(var(--multiplier) * -50px), -300px)
+    );
+  }
+  50% {
+    transform: translate(
+      min(calc(var(--multiplier) * 100px), 600px),
+      max(calc(var(--multiplier) * -50px - 10px), -310px)
+    );
+  }
+}
+
+@keyframes takeoff {
+  0% {
+    transform: translate(
+      min(calc(var(--crash-point) * 100px), 600px),
+      max(calc(var(--crash-point) * -50px), -300px)
+    );
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(100% + 200px), -100%);
+    opacity: 0;
+  }
+}
+
+/* Customização da scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.2);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.4);
+}
+
+/* Efeito de brilho */
+.glow {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+.drop-shadow-glow {
+  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5));
+}
+
+/* Padrão de grid de fundo */
+.bg-grid-pattern {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
